@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+// import DefaultLayout from '@/layouts/DefaultLayout'
 const routes = [
   {
     path: '/',

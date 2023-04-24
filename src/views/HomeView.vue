@@ -5,14 +5,33 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
   components: {
     HelloWorld
-  }
+  },
+  
 }
+</script> -->
+<script>
+import HelloWorld from '@/components/HelloWorld.vue'
+
+import { defineComponent, onMounted } from "vue";
+export default defineComponent({
+  name: 'HomeView',
+  components: {
+    HelloWorld
+  },
+ setup(){
+  
+  onMounted(()=>{
+    // console.log("accessing variable",process.env.VUE_APP_SUPABASE_URL, process.env.VUE_APP_SUPABASE_KEY)
+    console.log("accessing variable",process.env.VUE_APP_SUPABASE_KEY )
+    // console.log(process.env.meta)
+  })
+ }
+})
 </script>
